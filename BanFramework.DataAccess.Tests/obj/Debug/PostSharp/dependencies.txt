@@ -1,0 +1,2 @@
+C:\ProgramData\PostSharp\6.0.32\bin.Release\net471\PostSharp.Compiler.Engine.dll
+C:\BanFramework\BanFramework.DataAccess.Tests\obj\Debug\PostSharp\postsharp.config

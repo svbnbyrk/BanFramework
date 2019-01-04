@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Core", "BanFramework.Core\BanFramework.Core.csproj", "{BAB99F40-45D3-4915-AAAE-3ED0007350BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.Entities", "BanFramework.Mssql.Entities\BanFramework.Mssql.Entities.csproj", "{0A9481F2-D566-43C2-8D6E-E635D9B04C20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.DataAccess", "BanFramework.Mssql.DataAccess\BanFramework.Mssql.DataAccess.csproj", "{EFE92156-E22A-4570-9D23-200DE03ED9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.Business", "BanFramwork.Mssql.Business\BanFramework.Mssql.Business.csproj", "{FA6FEE33-4BB1-4147-B728-7B1640265F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.MvcWebUI", "BanFramework.Mssql.MvcWebUI\BanFramework.Mssql.MvcWebUI.csproj", "{AB921491-58C1-49E8-B339-AA10F7FB4E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.MvcWebUI.Tests", "BanFramework.Mssql.MvcWebUI.Tests\BanFramework.Mssql.MvcWebUI.Tests.csproj", "{56203D0D-CAF2-4441-85ED-AAE9D8B961CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.DataAccess.Tests", "BanFramework.DataAccess.Tests\BanFramework.Mssql.DataAccess.Tests.csproj", "{9BFC92A5-E2C3-41EC-B4C9-94CA0B58083A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.Business.Tests", "BanFramework.Mssql.Business.Tests\BanFramework.Mssql.Business.Tests.csproj", "{9A4B53AC-3489-4BD8-9847-6E2395322781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanFramework.Mssql.WebApi", "BanFramework.Mssql.WebApi\BanFramework.Mssql.WebApi.csproj", "{7331363F-D220-4E9E-BCE9-330C74C04690}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BanFramework.Mssql.WcfService", "BanFramework.Mssql.WcfService\", "{4CCA73BD-CE12-4D94-9A8F-E43608FEF0EA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61896"
+		Debug.AspNetCompiler.PhysicalPath = "BanFramework.Mssql.WcfService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61896\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61896"
+		Release.AspNetCompiler.PhysicalPath = "BanFramework.Mssql.WcfService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61896\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61896"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAB99F40-45D3-4915-AAAE-3ED0007350BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB99F40-45D3-4915-AAAE-3ED0007350BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB99F40-45D3-4915-AAAE-3ED0007350BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB99F40-45D3-4915-AAAE-3ED0007350BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9481F2-D566-43C2-8D6E-E635D9B04C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9481F2-D566-43C2-8D6E-E635D9B04C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9481F2-D566-43C2-8D6E-E635D9B04C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9481F2-D566-43C2-8D6E-E635D9B04C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE92156-E22A-4570-9D23-200DE03ED9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE92156-E22A-4570-9D23-200DE03ED9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE92156-E22A-4570-9D23-200DE03ED9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE92156-E22A-4570-9D23-200DE03ED9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6FEE33-4BB1-4147-B728-7B1640265F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6FEE33-4BB1-4147-B728-7B1640265F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6FEE33-4BB1-4147-B728-7B1640265F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6FEE33-4BB1-4147-B728-7B1640265F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB921491-58C1-49E8-B339-AA10F7FB4E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB921491-58C1-49E8-B339-AA10F7FB4E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB921491-58C1-49E8-B339-AA10F7FB4E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB921491-58C1-49E8-B339-AA10F7FB4E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56203D0D-CAF2-4441-85ED-AAE9D8B961CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56203D0D-CAF2-4441-85ED-AAE9D8B961CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56203D0D-CAF2-4441-85ED-AAE9D8B961CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56203D0D-CAF2-4441-85ED-AAE9D8B961CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFC92A5-E2C3-41EC-B4C9-94CA0B58083A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFC92A5-E2C3-41EC-B4C9-94CA0B58083A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFC92A5-E2C3-41EC-B4C9-94CA0B58083A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFC92A5-E2C3-41EC-B4C9-94CA0B58083A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4B53AC-3489-4BD8-9847-6E2395322781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4B53AC-3489-4BD8-9847-6E2395322781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4B53AC-3489-4BD8-9847-6E2395322781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4B53AC-3489-4BD8-9847-6E2395322781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7331363F-D220-4E9E-BCE9-330C74C04690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7331363F-D220-4E9E-BCE9-330C74C04690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7331363F-D220-4E9E-BCE9-330C74C04690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7331363F-D220-4E9E-BCE9-330C74C04690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CCA73BD-CE12-4D94-9A8F-E43608FEF0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCA73BD-CE12-4D94-9A8F-E43608FEF0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCA73BD-CE12-4D94-9A8F-E43608FEF0EA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCA73BD-CE12-4D94-9A8F-E43608FEF0EA}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

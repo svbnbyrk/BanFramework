@@ -1,0 +1,15 @@
+C:\BanFramework\BanFramework.Mssql.Entities\obj\Debug\BanFramework.Mssql.Entities.csprojResolveAssemblyReference.cache
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\BanFramework.Mssql.Entities.dll
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\BanFramework.Mssql.Entities.pdb
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\BanFramework.Core.dll
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\EntityFramework.dll
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\BanFramework.Core.pdb
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\EntityFramework.xml
+C:\BanFramework\BanFramework.Mssql.Entities\obj\Debug\BanFramework.Mssql.Entities.dll
+C:\BanFramework\BanFramework.Mssql.Entities\obj\Debug\BanFramework.Mssql.Entities.pdb
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\FluentValidation.dll
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\PostSharp.dll
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\FluentValidation.xml
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\PostSharp.xml
+C:\BanFramework\BanFramework.Mssql.Entities\bin\Debug\BanFramework.Mssql.Entities.pssym
+C:\BanFramework\BanFramework.Mssql.Entities\obj\Debug\BanFramework.Mssql.Entities.dll.postsharp

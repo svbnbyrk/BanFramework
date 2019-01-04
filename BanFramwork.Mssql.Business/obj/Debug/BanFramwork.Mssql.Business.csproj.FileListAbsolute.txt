@@ -1,0 +1,5 @@
+C:\BanFramework\BanFramwork.Mssql.Business\bin\Debug\BanFramwork.Mssql.Business.dll
+C:\BanFramework\BanFramwork.Mssql.Business\bin\Debug\BanFramwork.Mssql.Business.pdb
+C:\BanFramework\BanFramwork.Mssql.Business\obj\Debug\BanFramwork.Mssql.Business.csprojResolveAssemblyReference.cache
+C:\BanFramework\BanFramwork.Mssql.Business\obj\Debug\BanFramwork.Mssql.Business.dll
+C:\BanFramework\BanFramwork.Mssql.Business\obj\Debug\BanFramwork.Mssql.Business.pdb
