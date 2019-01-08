@@ -9,6 +9,7 @@ using BanFramework.Mssql.DataAccess.Abstrack;
 using BanFramework.Core.CrossCuttingConcerns.Validation.FluenValidation;
 using BanFramwork.Mssql.Business.ValidationRules.FluentValidation;
 using BanFramework.Core.Aspects.PostSharp;
+using BanFramework.Core.DataAccess;
 
 namespace BanFramwork.Mssql.Business.Concert.Managers
 {
@@ -16,9 +17,10 @@ namespace BanFramwork.Mssql.Business.Concert.Managers
     {
         private IProductDal _productDal;
 
-        public ProductManager (IProductDal productDal)
+        public ProductManager (IProductDal productDal, IQueryableReporsitory<Product> queryable)
         {
             _productDal = productDal;
+            _queryable = queryable;
         }
 
         [FluentValidationAspect(typeof(ProdactionValidatior))]
