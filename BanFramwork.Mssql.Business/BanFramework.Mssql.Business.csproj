@@ -73,6 +73,7 @@
     <Compile Include="Abstrack\IProductService.cs" />
     <Compile Include="Concert\Managers\ProductManager.cs" />
     <Compile Include="DependecyResolvers\Ninject\BusinessModule.cs" />
+    <Compile Include="DependecyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\FluentValidation\ProdactionValidatior.cs" />
   </ItemGroup>
