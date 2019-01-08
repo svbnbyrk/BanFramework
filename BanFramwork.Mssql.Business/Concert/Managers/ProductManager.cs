@@ -10,6 +10,8 @@ using BanFramework.Mssql.DataAccess.Abstrack;
 using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using BanFramework.Mssql.Business.ValidationRules.FluentValidation;
 using BanFramework.Core.Aspects.PostSharp;
+using BanFramework.Core.Aspects.PostSharp.TransactionAspects;
+using BanFramework.Core.Aspects.PostSharp.ValidationAspects;
 using BanFramework.Core.DataAccess;
 
 namespace BanFramework.Mssql.Business.Concert.Managers
@@ -55,8 +57,14 @@ namespace BanFramework.Mssql.Business.Concert.Managers
             return _productDal.Update(product);
         }
 
+        [TransactionScopeAspect]
         public void TransactionalOperation(Product product1, Product product2)
         {
+            _productDal.Add(product1);
+
+            _productDal.Update(product2);
+
+
             //using (TransactionScope scope = new TransactionScope())
             //{
             //    try
@@ -72,7 +80,8 @@ namespace BanFramework.Mssql.Business.Concert.Managers
             //        scope.Dispose();
             //    }
             //}
-            
+
+
         }
 
     }

@@ -1,13 +1,10 @@
-﻿using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
+﻿using System;
+using System.Linq;
+using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using FluentValidation;
 using PostSharp.Aspects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BanFramework.Core.Aspects.PostSharp
+namespace BanFramework.Core.Aspects.PostSharp.ValidationAspects
 {
     [Serializable]// aspectlerde şart serileştirimiş olmalı
     public class FluentValidationAspect : OnMethodBoundaryAspect
