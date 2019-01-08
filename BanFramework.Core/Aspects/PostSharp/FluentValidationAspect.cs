@@ -1,4 +1,4 @@
-﻿using BanFramework.Core.CrossCuttingConcerns.Validation.FluenValidation;
+﻿using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using FluentValidation;
 using PostSharp.Aspects;
 using System;
@@ -12,7 +12,7 @@ namespace BanFramework.Core.Aspects.PostSharp
     [Serializable]// aspectlerde şart serileştirimiş olmalı
     public class FluentValidationAspect : OnMethodBoundaryAspect
     {
-        Type _validatorType;
+        private readonly Type _validatorType;
         public FluentValidationAspect(Type validatorType)
         {
             _validatorType = validatorType;
@@ -20,12 +20,15 @@ namespace BanFramework.Core.Aspects.PostSharp
         public override void OnEntry(MethodExecutionArgs args)
         {
             var validator = (IValidator)Activator.CreateInstance(_validatorType);
-            var entityType = _validatorType.BaseType.GetGenericArguments()[0];
-            var entities = args.Arguments.Where(t => t.GetType() == entityType);
-
-            foreach (var entity in entities)
+            if (_validatorType.BaseType != null)
             {
-                ValidatorTool.FluentValidate(validator, entity);
+                var entityType = _validatorType.BaseType.GetGenericArguments()[0];
+                var entities = args.Arguments.Where(t => t.GetType() == entityType);
+
+                foreach (var entity in entities)
+                {
+                    ValidatorTool.FluentValidate(validator, entity);
+                }
             }
         }   
     }

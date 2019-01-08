@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BanFramwork.Mssql.Business.ValidationRules.FluentValidation
+namespace BanFramework.Mssql.Business.ValidationRules.FluentValidation
 {
-    public class ProdactionValidatior : AbstractValidator<Product>
+    public class ProductionValidator : AbstractValidator<Product>
     {
-        public void ProductValidatior()
+        public void ProductValidator()
         {
             RuleFor(p => p.Name).NotEmpty();
             RuleFor(p => p.ProductId).NotEmpty();

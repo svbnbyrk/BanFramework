@@ -1,4 +1,4 @@
-﻿using BanFramwork.Mssql.Business.Abstrack;
+﻿using BanFramework.Mssql.Business.Abstrack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,27 +6,33 @@ using System.Text;
 using System.Threading.Tasks;
 using BanFramework.Mssql.Entities.Concrete;
 using BanFramework.Mssql.DataAccess.Abstrack;
-using BanFramework.Core.CrossCuttingConcerns.Validation.FluenValidation;
-using BanFramwork.Mssql.Business.ValidationRules.FluentValidation;
+using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
+using BanFramework.Mssql.Business.ValidationRules.FluentValidation;
 using BanFramework.Core.Aspects.PostSharp;
 using BanFramework.Core.DataAccess;
 
-namespace BanFramwork.Mssql.Business.Concert.Managers
+namespace BanFramework.Mssql.Business.Concert.Managers
 {
     public class ProductManager : IProductService
     {
-        private IProductDal _productDal;
+        private IProductDal _object;
+        private readonly IProductDal _productDal;
+
+        public ProductManager(IProductDal @object)
+        {
+            this._object = @object;
+        }
 
         public ProductManager (IProductDal productDal, IQueryableReporsitory<Product> queryable)
         {
             _productDal = productDal;
-            _queryable = queryable;
+            //_queryable = queryable;
         }
 
-        [FluentValidationAspect(typeof(ProdactionValidatior))]
+        [FluentValidationAspect(typeof(ProductionValidator))]
         public Product Add(Product product)
         {
-            //ValidatorTool.FluentValidate(new ProdactionValidatior(), product);
+            //ValidatorTool.FluentValidate(new ProductionValidator(), product);
             return _productDal.Add(product);
         }
 
@@ -35,16 +41,16 @@ namespace BanFramwork.Mssql.Business.Concert.Managers
             return _productDal.GetList();
         }
 
-        public Product GetbyId(int id)
+        public Product GetById(int id)
         {
             return _productDal.Get(p => p.ProductId == id);
         }
 
-        [FluentValidationAspect(typeof(ProdactionValidatior))]
+        [FluentValidationAspect(typeof(ProductionValidator))]
         public Product Update(Product product)
         {
             ////işkuralları yazılır
-            //ValidatorTool.FluentValidate(new ProdactionValidatior(), product);
+            //ValidatorTool.FluentValidate(new ProductionValidator(), product);
             return _productDal.Update(product);
         }
     }

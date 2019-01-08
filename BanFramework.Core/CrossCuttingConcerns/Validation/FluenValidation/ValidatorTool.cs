@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BanFramework.Core.CrossCuttingConcerns.Validation.FluenValidation
+namespace BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation
 {
     public class ValidatorTool
     {
