@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using BanFramework.Mssql.Entities.Concrete;
 using BanFramework.Mssql.DataAccess.Abstrack;
 using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
@@ -23,7 +24,7 @@ namespace BanFramework.Mssql.Business.Concert.Managers
             this._object = @object;
         }
 
-        public ProductManager (IProductDal productDal, IQueryableReporsitory<Product> queryable)
+        public ProductManager(IProductDal productDal, IQueryableReporsitory<Product> queryable)
         {
             _productDal = productDal;
             //_queryable = queryable;
@@ -53,5 +54,26 @@ namespace BanFramework.Mssql.Business.Concert.Managers
             //ValidatorTool.FluentValidate(new ProductionValidator(), product);
             return _productDal.Update(product);
         }
+
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            //using (TransactionScope scope = new TransactionScope())
+            //{
+            //    try
+            //    {
+            //        _productDal.Add(product1);
+
+            //        _productDal.Update(product2);
+
+            //        scope.Complete();
+            //    }
+            //    catch 
+            //    {
+            //        scope.Dispose();
+            //    }
+            //}
+            
+        }
+
     }
 }

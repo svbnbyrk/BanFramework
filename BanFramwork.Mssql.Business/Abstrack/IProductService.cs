@@ -13,5 +13,6 @@ namespace BanFramework.Mssql.Business.Abstrack
         Product GetById(int id);
         Product Add(Product producy);
         Product Update(Product producy);
+        void TransactionalOperation(Product product1, Product product2);
     }
 }
