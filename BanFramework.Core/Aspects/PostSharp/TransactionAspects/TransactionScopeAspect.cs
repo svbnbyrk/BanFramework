@@ -11,7 +11,7 @@ namespace BanFramework.Core.Aspects.PostSharp.TransactionAspects
     [Serializable]
     public class TransactionScopeAspect:OnMethodBoundaryAspect  //farklı parametlerelerle aspect çağırmak için 
     {
-        private TransactionScopeOption _option;
+        private readonly TransactionScopeOption _option;
         public TransactionScopeAspect(TransactionScopeOption option)
         {
             _option = option;
