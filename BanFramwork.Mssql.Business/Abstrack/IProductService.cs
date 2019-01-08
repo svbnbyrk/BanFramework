@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BanFramwork.Mssql.Business.Abstrack
+namespace BanFramework.Mssql.Business.Abstrack
 {
     public interface IProductService
     {
         List<Product> GetAll();
-        Product GetbyId(int id);
+        Product GetById(int id);
         Product Add(Product producy);
         Product Update(Product producy);
+        void TransactionalOperation(Product product1, Product product2);
     }
 }
