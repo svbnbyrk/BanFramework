@@ -10,8 +10,10 @@ using BanFramework.Mssql.DataAccess.Abstrack;
 using BanFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using BanFramework.Mssql.Business.ValidationRules.FluentValidation;
 using BanFramework.Core.Aspects.PostSharp;
+using BanFramework.Core.Aspects.PostSharp.CacheAspects;
 using BanFramework.Core.Aspects.PostSharp.TransactionAspects;
 using BanFramework.Core.Aspects.PostSharp.ValidationAspects;
+using BanFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
 using BanFramework.Core.DataAccess;
 
 namespace BanFramework.Mssql.Business.Concert.Managers
@@ -33,12 +35,14 @@ namespace BanFramework.Mssql.Business.Concert.Managers
         }
 
         [FluentValidationAspect(typeof(ProductionValidator))]
+        [CacheRemoveAspect(/*"pattern",*/typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             //ValidatorTool.FluentValidate(new ProductionValidator(), product);
             return _productDal.Add(product);
         }
 
+        [CacheAspect(typeof(MemoryCacheManager),120)]
         public List<Product> GetAll()
         {
             return _productDal.GetList();

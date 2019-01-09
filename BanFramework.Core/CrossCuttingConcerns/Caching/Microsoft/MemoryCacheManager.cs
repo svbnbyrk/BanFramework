@@ -3,43 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.Caching
+using System.Runtime.Caching;
+using System.Text.RegularExpressions;
 
 namespace BanFramework.Core.CrossCuttingConcerns.Caching.Microsoft
 {
      public class MemoryCacheManager:ICacheManager
      {
+         
          protected ObjectCache Cache => MemoryCache.Default;
       
          
         public T Get<T>(string key)
         {
-            throw new NotImplementedException();
+            return (T)Cache[key];
         }
 
-        public void Add(string key, object data, int cacheDuration)
+        public void Add(string key, object data, int cacheDuration = 60)
         {
-            throw new NotImplementedException();
+            if (data==null)
+            {
+               return;
+            }
+
+            var policy = new CacheItemPolicy {AbsoluteExpiration = DateTime.Now + TimeSpan.FromMinutes(cacheDuration)};
+            Cache.Add(new CacheItem(key, data), policy);
         }
 
         public bool IsAdd(string key)
         {
-            throw new NotImplementedException();
+
+            return Cache.Contains(key);
         }
 
         public void Remove(string key)
         {
-            throw new NotImplementedException();
+            Cache.Remove(key);
         }
 
         public void RemoveById(string pattern)
         {
-            throw new NotImplementedException();
+            var regex = new Regex(pattern, RegexOptions.Singleline | RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            var keysToRemove = Cache.Where(d => regex.IsMatch(d.Key)).Select(d => d.Key).ToList();
+            foreach (var key in keysToRemove)
+            {
+                Remove(key);
+            }
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            foreach (var item in Cache)
+            {
+                Remove(item.Key);
+            }
         }
     }
 
